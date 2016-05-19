@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Send&amp;Recive</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_reciever">Reciever</string>
+    <string name="calc">Clculate Taxes</string>
+    <string name="name">Employee Name</string>
+    <string name="salary">Salary</string>
+    <string name="net">Net Salary :</string>
+    <string name="empty"></string>
+    <string name="send">Back With Salry</string>
+
+</resources>
