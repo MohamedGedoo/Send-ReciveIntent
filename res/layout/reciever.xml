@@ -35,6 +35,7 @@
         android:layout_below="@+id/salemp"
         android:layout_marginLeft="49dp"
         android:layout_marginTop="79dp"
-        android:text="@string/send" />
+        android:text="@string/send" 
+        android:onClick="backMethod"/>
 
 </RelativeLayout>

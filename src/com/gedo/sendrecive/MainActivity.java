@@ -17,13 +17,17 @@ public class MainActivity extends Activity {
 
 		String name, salary;
 
+		//Get data from InputText
 		name = employeeName.getText().toString();
 		salary = employeeSalary.getText().toString();
 
+		// Create Intent to call the Receiver Activity and send Data with it
+	
 		Intent send = new Intent(MainActivity.this, Reciever.class);
 		send.putExtra("name", name);
 		send.putExtra("salary", salary);
-		startActivity(send);
+		//Start the Activity and wait for result
+		startActivityForResult(send, 0);
 
 	}
 
@@ -35,6 +39,22 @@ public class MainActivity extends Activity {
 		employeeName = (EditText) findViewById(R.id.etName);
 		employeeSalary = (EditText) findViewById(R.id.etSalary);
 		netSalary = (TextView) findViewById(R.id.tvNet);
+
+	}
+
+	
+	// processing on the data that returned from the Reciever Activity
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+
+		if (requestCode == 0 && resultCode == RESULT_OK) {
+
+			int valueOfSalary = data.getExtras().getInt("valueOfSalary");
+			netSalary.setText(String.valueOf(valueOfSalary));
+		}
 
 	}
 
